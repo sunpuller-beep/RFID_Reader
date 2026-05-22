@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="co.kr.bluebird.rfid.app.bbrfiddemo.MainActivity" >
+
+    <item
+        android:id="@+id/action_connected"
+        android:icon="@drawable/connected"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:visible="false"
+        android:title="@string/connected_str"/>
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/home"
+        android:orderInCategory="101"
+        android:showAsAction="always"
+        android:visible="true"
+        android:title="@string/home_str"/>
+
+    <!-- Always be display Battery START-->
+    <item
+        android:id="@+id/action_battery"
+        android:orderInCategory="102"
+        android:showAsAction="always"
+        android:visible="false"
+        android:title="Batt"/>
+    <!-- Always be display Battery START-->
+</menu>

@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RFID-Reader</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="m_connect_str">CONNECTIVITY</string>
+    <string name="m_sd_func_str">SD FUNCTION</string>
+    <string name="m_rf_conf_str">RF CONFIG</string>
+    <string name="m_rf_acc_str">RF ACCESS</string>
+    <string name="m_rf_sel_str">RF SELECTION</string>
+    <string name="m_rapid_str">SCAN</string>
+    <string name="m_inv_str">INVENTORY</string>
+    <string name="m_bar_str">BARCODE(BC)</string>
+    <string name="m_bar_sb_str">BARCODE(SB)</string>
+    <string name="m_bat_str">BATTERY</string>
+    <string name="m_info_str">INFORMATION</string>
+
+    <string name="read_start_str">START</string>
+    <string name="read_stop_str">STOP</string>
+
+    <string name="yes_str">YES</string>
+    <string name="no_str">NO</string>
+    <string name="want_tracking_str">Do you want to track selected tag?</string>
+    <string name="locating_str">Locating</string>
+
+    <string name="sled_info_str">Software Information</string>
+    
+    <string name="copyright_str">Copyright © 2015 - 2026 Bluebird Inc,\nAll rights reserved.</string>
+
+    <string name="copy_str">Copyright © 2017 Bluebird Inc, All Rights Reserved.</string>
+
+    <string name="set_mode_key_enable_str">Set ModeKey Enable</string>
+    
+    <string name="set_mode_key_disable_str">Set ModeKey Disable</string>
+    
+    <string name="get_mode_key_enable_state_str">Get ModeKey State</string>
+    
+    <string name="set_trg_key_enable_str">Set TriggerKey Enable</string>
+
+    <string name="set_tag_buzzer_enable_str">Set Tag BZ Enable</string>
+
+    <string name="set_tag_buzzer_disable_str">Set Tag BZ Disable</string>
+
+    <string name="get_tag_buzzer_state_str">Get Tag BZ State</string>
+
+    <string name="set_tag_buzzer_sound_str">Set Tag BZ Sound</string>
+
+    <string name="set_led_enable_str">Set LED Enable</string>
+
+    <string name="set_led_disable_str">Set LED Disable</string>
+
+    <string name="get_led_state_str">Get LED State</string>
+
+    <string name="set_trg_key_disable_str">Set TriggerKey Disable</string>
+    
+    <string name="get_trg_key_enable_state_str">Get TriggerKey State</string>
+
+    <string name="set_multi_scan_type_enable_str">MultiScanType Enable</string>
+
+    <string name="set_multi_scan_type_disable_str">MultiScanType Disable</string>
+
+    <string name="get_multi_scan_type_str">Get MultiScanType State</string>
+
+    <string name="os_version_str">Android Build Number : </string>
+    
+    <string name="rf_lib_version_str">RFID Library Version : </string>
+    
+    <string name="rf_module_version_str">RFID Module Version : </string>
+    
+    <string name="sd_lib_version_str">Firmware Version : </string>
+    
+    <string name="sd_bt_version_str">BT Firmware Version : </string>
+    
+    <string name="sd_serial_str">Serial Number : </string>
+    
+    <string name="app_version_str">Application Version : </string>
+    
+    <string name="bootloader_version_str">Bootloader Version : </string>
+    
+    <string name="sel_mem_type_str">Memtype</string>
+    
+    <string name="sel_mask_str">Mask</string>
+    
+    <string name="sel_start_pos_str">StartPos</string>
+    
+    <string name="sel_mask_length_str">Mask Length</string>
+    
+    <string name="sel_action_str">Action</string>
+    
+    <string name="set_criteria_str">Set Criteria</string>
+    
+    <string name="remove_criteria_str">Remove Criteria</string>
+    
+    <string name="set_selection_str">Set Selection</string>
+    
+    <string name="get_selection_str">Get Selection</string>
+    
+    <string name="remove_selection_str">Remove Selection</string>
+    
+    <string name="sled_connected_str">State : Connected</string>
+
+    <string name="rfr900">RFR900</string>
+
+    <string name="rfr901">RFR901</string>
+
+    <string name="rfr971">RFR971</string>
+
+    <string name="internal_rfid">Internal RFID</string>
+
+    <string name="use_frequency">Frequency</string>
+
+    <string name="use_epc_convert">EPC CONVERT</string>
+
+    <string name="remove_pc_str">REMOVE PC</string>
+
+    <string name="selection_str">SELECT</string>
+    
+    <string name="toggle_str">TOGGLE</string>
+
+    <string name="file_str">FILE</string>
+    
+    <string name="session_str">Session</string>
+
+    <string name="sel_flag_str">SL Flag</string>
+
+    <string name="turbo_str">TURBO</string>
+    
+    <string name="tag_str">TAG C</string>
+    <string name="rssi_str2">RSSI</string>
+    
+    <string name="filter_str">FILTER</string>
+    
+    <string name="sound_str">SOUND</string>
+    
+    <string name="inven_str">START</string>
+    <string name="track_str">START</string>
+
+    <string name="stop_inven_str">STOP</string>
+    <string name="stop_track_str">STOP</string>
+
+    <string name="back_inv_str">Back to Inventory</string>
+
+    <string name="available_regions_str">Available Regions</string>
+    
+    <string name="set_region_str">Set Region</string>
+    
+    <string name="get_region_str">Get Region</string>
+    
+    <string name="get_available_region_str">Available Region</string>
+    
+    <string name="set_target_str">Set Inventory\nTarget</string>
+    
+    <string name="get_target_str">Get Inventory\nTarget</string>
+    
+    <string name="set_duty_str">Set Duty\n(0 ~ 1000)</string>
+    
+    <string name="get_duty_str">Get Duty</string>
+
+    <string name="set_accesstime_str">Set AccessTimeout\n(100 ~ 10000)</string>
+
+    <string name="get_accesstime_str">Get AccessTimeout</string>
+
+    <string name="set_dwell_str">Set Dwelltime\n(50 ~ 400)</string>
+    
+    <string name="get_dwell_str">Get Dwelltime</string>
+    
+    <string name="set_power_str">Set RFPower\n(5 ~ 30)</string>
+    
+    <string name="get_power_str">Get RFPower</string>
+
+    <!--[20251120]Add Singulation API  START-->
+    <string name="set_min_sing_str">Set Min Singulation</string>
+    <string name="set_max_sing_str">Set Max Singulation</string>
+    <string name="get_min_sing_str">Get Min Singulation</string>
+    <string name="get_max_sing_str">Get Max Singulation</string>
+
+    <string name="set_rfmode_expansion_str">Set RF Expansion</string>
+    <string name="get_rfmode_expansion_str">Get RF Expansion</string>
+    <!--[20251120]Add Singulation API  START-->
+
+    <string name="set_sing_str">Set Singulation\n(0 ~ 15)</string>
+    <string name="get_sing_str">Get Singulation</string>
+
+    <string name="set_rfmode_str">Set RFMODE\n(0 ~ 3)</string>
+
+    <string name="set_rfmode_str_ext">Set RFMODE\n(0 ~ 4)</string>
+    
+    <string name="get_rfmode_str">Get RFMODE</string>
+
+    <string name="set_lbt_str">Set LBT\n(0, 1, 3)</string>
+
+    <string name="set_iso_code_str">Set ISO code</string>
+    <string name="get_iso_code_str">Get ISO code</string>
+
+    <string name="get_lbt_str">Get LBT</string>
+
+    <string name="set_gen2x_str">Set Gen2x\n(0, 1, 2)</string>
+
+    <string name="get_gen2x_str">Get Gen2x</string>
+    
+    <string name="set_toggle_str">Set Toggle</string>
+    
+    <string name="get_toggle_str">Get Toggle</string>
+
+    <string name="set_rssi_str">Set RSSI</string>
+    
+    <string name="get_rssi_str">Get RSSI</string>
+
+    <string name="set_enable_channels">Set Enable Channels</string>
+
+    <string name="get_enable_channels">Get Enable Channels</string>
+
+    <string name="get_default_channels">Get Default Channels</string>
+
+    <string name="set_antenna">Set Antenna</string>
+    <string name="get_antenna">Get Antenna</string>
+    <string name="get_antenna_gpio">Get AntDetect(GPIO)</string>
+    <string name="get_antenna_rampup">Get AntDetect(RampUp)</string>
+    
+    <!-- Set/Get Antenna parameter [ START ] -->
+    <string name="set_current_antenna">Set Current Antenna</string>
+
+    <string name="get_current_antenna">Get Current Antenna</string>
+    <!-- Set/Get Antenna parameter [ END ] -->
+
+    <!-- Set/Get Tag Focus parameter [ START ] -->
+    <string name="set_tag_focus">Set Tag Focus</string>
+
+    <string name="get_tag_focus">Get Tag Focus</string>
+    <!-- Set/Get Tag Focus parameter [ END ] -->
+
+    <string name="drawer_open">Open</string>
+    
+    <string name="drawer_close">Close</string>
+    
+    <string name="received_msg_str">Message : </string>
+    
+    <string name="received_data_str">Recv Data : </string>
+    
+    <string name="version_str">"Version"</string>
+    
+    <string name="read_data_str">"Read Data : "</string>
+    
+    <string name="empty_str">""</string>
+
+    <string name="newline_str">"\n"</string>
+    
+    <string name="connect_state_str">"Current Connect state : "</string>
+    
+    <string name="connect_str">"Connect"</string>
+
+    <string name="disconnect_str">"Disconnect"</string>
+
+    <string name="connected_str">"Connected"</string>
+
+    <string name="home_str">"Home"</string>
+
+    <string name="disconnected_str">"Disconnected"</string>
+    
+    <string name="get_con_str">"Get con state"</string>
+    
+    <string name="set_rfid_str">"Set RFID Mode"</string>
+    
+    <string name="set_barcode_str">"Set BARCODE Mode"</string>
+    
+    <string name="get_trg_str">"Get trg Mode"</string>
+
+    <string name="pause_barcode_str">"Pause Barcode"</string>
+    
+    <string name="resume_barcode_str">"Resume Barcode"</string>
+    
+    <string name="get_barcode_state_str">"Get Barcode State"</string>
+
+    <string name="enable_multi_str">"Enable Multi"</string>
+
+    <string name="disable_multi_str">"Disable Multi"</string>
+
+    <!-- Set/Get Barcode parameter START -->
+    <string name="enable_dw_str">"Enable DataWedge"</string>
+
+    <string name="disable_dw_str">"Disable DataWedge"</string>
+
+    <string name="get_dw_str">"GET DataWedge STATE"</string>
+    <!-- Set/Get Barcode parameter END -->
+
+    <string name="get_multi_str">"Get Multi State"</string>
+
+    <string name="get_barcode_camera_info_str">"Get Barcode/Camera info"</string>
+
+    <string name="get_barcode_info_str">"Get Barcode info"</string>
+
+    <string name="press_barcode_str">"Barcode Press"</string>
+    
+    <string name="release_barcode_str">"Barcode Release"</string>
+    
+    <string name="set_barcode_hw_str">"Set BC/HW Key"</string>
+    
+    <string name="get_barcode_hw_str">"Get BC/HW Key"</string>
+
+    <string name="set_trigger_str">"Set BC Trigger"</string>
+
+    <string name="get_trigger_str">"Get BC Trigger"</string>
+
+    <string name="set_multi_count_str">"Set Multi Num"</string>
+
+    <string name="get_multi_count_str">"Get Multi Num"</string>
+
+    <string name="set_sleep_str">"Set Sleeptime"</string>
+    
+    <string name="get_sleep_str">"Get Sleeptime"</string>
+    
+    <string name="get_buzzer_str">"Get Buzzer LV"</string>
+    
+    <string name="set_buzzer_str">"Set Buzzer LV"</string>
+    
+    <string name="get_buzzer_state_str">"Get Buzzer State"</string>
+    
+    <string name="set_buzzer_mute_str">"Set Buzzer Mute"</string>
+    
+    <string name="set_buzzer_noisy_str">"Set Buzzer Noisy"</string>
+    
+    <string name="get_bat_str">"Get Batt LV"</string>
+
+    <string name="set_default_all">"Set SD Default"</string>
+
+    <string name="get_firm_str">"Get Firmware Version"</string>
+    <!--[START][20251222][Package update]Add RFID FW msg-->
+    <string name="update_package_fw_str">"Update Pakage-Firmware"</string>
+    <!--[END][20251222][Package update]Add RFID FW msg-->
+    
+    <string name="sleep_str">"Sleeptime"</string>
+    
+    <string name="get_charge_str">"Get Charge State"</string>
+
+    <!--smart battery start-->
+    <string name="get_smart_batt">"Get Smart Staus"</string>
+    <string name="get_smart_voltage">"Get Smart Voltage"</string>
+    <string name="get_smart_present">"Get Smart Present"</string>
+    <string name="get_smart_level">"Get Smart level"</string>
+    <string name="get_smart_life_time">"Get Smart LifeTime"</string>
+    <string name="get_smart_health">"Get Smart Health"</string>
+    <string name="get_smart_temperature">"Get Smart Temperature"</string>
+    <string name="get_smart_cycle_cnt">"Get Smart CycleCount"</string>
+    <string name="get_smart_capacity">"Get Smart Capacity"</string>
+    <string name="get_smart_serial">"Get Smart Serial"</string>
+    <string name="smart_critical_temper_title">"Battery Critical Temperature"</string>
+    <string name="smart_critical_temper_str">"The battery temperature is 58 degrees or higher."</string>
+    <!--smart battery end-->
+
+    <string name="set_serial_str">"Set Serial No."</string>
+    
+    <string name="get_serial_str">"Get Serial No."</string>
+    
+    <string name="update_rf_firm_str">"Update RFID Firmware"</string>
+    
+    <string name="update_firm_str">"Update SLED Firmware"</string>
+    
+    <string name="get_bt_version_str">"Get BT VERSION"</string>
+    
+    <string name="start_str">Start</string>
+    
+    <string name="pause_str">Pause</string>
+
+    <string name="no_sleep_str">No Sleep</string>
+    
+    <string name="timer_str">"00:00:00.0"</string>    
+    <string name="timer_des_str">"ElapsedTime : "</string>
+
+    <string name="read_time_str">"Read Time : "</string>
+    
+    <string name="count_str">"0"</string>
+    <string name="count_des_str">"Count : "</string>
+    
+    <!-- [20250402]Add Bulk encoding START-->
+    <string name="count_uniq_total_str">"Uniq count : "</string>
+    <string name="count_success_str">"Success : "</string>
+    <string name="count_fail_str">"Remain : "</string>
+    <string name="encoding_inven_str">Start Encoding</string>
+    <string name="encoding_stop_inven_str">Stop Encoding</string>
+    <!-- [20250402]Add Bulk encoding END-->
+    <!-- [20250424]Add other inventory api for test START -->
+    <string name="inven_withLoc_str">Locate</string>
+    <string name="inven_withPhaseFreq_str">PhaseFreq</string>
+    <string name="inven_rssi_str">RssiLimit</string>
+    <string name="inven_custom_str">Custom</string>
+    <!-- [20250424]Add other inventory api for test END -->
+    <string name="clear_str">Clear List</string>
+    <string name="clear">Clear</string>
+
+    <string name="avr_speed_str">"Average Speed : "</string>
+    <string name="speed_str">"Speed : "</string>
+    <string name="speed_count_str">"0.0"</string>
+    <string name="speed_postfix_str">" cnt/sec"</string>
+    <string name="time_postfix_str">" sec"</string>
+    
+    <string name="filter_on_str">"Filter ON"</string>
+    <string name="filter_off_str">"Filter OFF"</string>
+    
+    <string name="simple_config_str">"Simple CFG"</string>
+    
+    <string name="rssi_str">"RSSI : "</string>
+
+    <string name="loc_str">"LOC : "</string>
+    <string name="epc_decode_str">"EPC : "</string>
+    
+    <string name="dup_str">"Dup Cnt : "</string>
+    
+    <string name="update_sled_firmware_str">"Update SLED Firmware..."</string>
+    
+    <string name="update_sled_bootloader_str">"Update SLED Bootloader..."</string>
+    
+    <string name="connecting_str">"Connecting..."</string>
+    
+    <string name="battery_state_str">"Battery State : "</string>
+    
+    <string name="percent_str">"%"</string>
+
+    <string name="warning_str">"WARNING!!!</string>
+
+    <string name="update_warning_rfid_str">"Please, pay attension the following before upgrading.\n\n1. Connect the charger to the devices before upgrading.\n2. If this upgrade fails on progress, you will not be able to recover using mobile.\n3. You must keep the upgrade screen during the upgrade.\n4. Never stop this upgrade progress after it has begun.\n5. Stop to this upgrade on progress could damage the device.\n\nDo you want to proceed?"</string>
+
+    <string name="update_warning_sled_str">"Please, pay attension the following before upgrading.\n\n1. Connect the charger to the devices before upgrading.\n2. You must keep the upgrade screen during the upgrade.\n3. Never stop this upgrade progress after it has begun.\n\nDo you want to proceed?"</string>
+
+    <string name="ok_str">"OK</string>
+
+    <string name="cancel_str">"CANCEL"</string>
+
+    <string name="reset_str">"Reset Config"</string>
+
+    <string name="barcode_sound_enable_str">Barcode Sound ON</string>
+
+    <string name="barcode_sound_disable_str">Barcode Sound OFF</string>
+
+    <string name="get_barcode_sound_state_str">Get Barcode Sound State</string>
+
+    <string name="barcode_enable_str">Barcode Enable</string>
+
+    <string name="barcode_disable_str">Barcode Disable</string>
+
+    <string name="get_barcode_revision_str">Get Barcode Revision</string>
+
+    <string name="barcode_illum_on_str">Illum. ON</string>
+
+    <string name="barcode_illum_off_str">Illum. OFF</string>
+
+    <string name="barcode_aim_on_str">Aim ON</string>
+
+    <string name="barcode_aim_off_str">Aim OFF</string>
+
+    <string name="get_param_str">Get Param</string>
+
+    <string name="set_param_str">Set Param</string>
+
+    <string name="input_param_str">Input Param Value : </string>
+
+    <string name="set_func_str">Set</string>
+
+    <string name="get_func_str">Get</string>
+
+    <string name="set_scanner_mode_str">Set Barcode Trg Mode</string>
+
+    <string name="get_scanner_mode_str">Get Barcode Trg Mode</string>
+
+    <string name="press_barcode_of_sled_str">"SB Barcode Start"</string>
+
+    <string name="release_barcode_of_sled_str">"SB Barcode Stop"</string>
+
+    <string name="permission_not_allowed">"Permission not allowed"</string>
+
+    <string name="sled_type">SLED Type : </string>
+    <string name="serial_num">Internal RFID S/N : </string>
+
+    <string-array name="param_array">
+        <item>UPC_A</item>
+        <item>UPC_E</item>
+        <item>UPC_E1</item>
+        <item>EAN8</item>
+        <item>EAN13</item>
+        <item>BOOKLAND_EAN</item>
+        <item>BOOKLAND_ISBN_FORMAT</item>
+        <item>DECODE_UPC_EAN_SUPPLEMENTAL</item>
+        <item>UPC_EAN_SUPPLEMENTAL_REDUNDANCY</item>
+        <item>DECODE_UPC_EAN_SUPPLEMENTAL_AIM_ID</item>
+        <item>TRANSMIT_UPC_A_CHK_DIGIT</item>
+        <item>TRANSMIT_UPC_E_CHK_DIGIT</item>
+        <item>TRANSMIT_UPC_E1_CHK_DIGIT</item>
+        <item>UPC_A_PREAMBLE</item>
+        <item>UPC_E_PREAMBLE</item>
+        <item>UPC_E1_PREAMBLE</item>
+        <item>CONVERT_UPC_E_TO_A</item>
+        <item>CONVERT_UPC_E1_TO_A</item>
+        <item>EAN8_EXTEND</item>
+        <item>COUPON_REPORT</item>
+        <item>ISSN_EAN</item>
+        <item>CODE128</item>
+        <item>CODE128_LEN_MIN</item>
+        <item>CODE128_LEN_MAX</item>
+        <item>GS1_128</item>
+        <item>ISBT128</item>
+        <item>ISBT128_CONCATENATION</item>
+        <item>ISBT128_CHECK_TABLE</item>
+        <item>ISBT128_CONCATENATION_REDUNDANCY</item>
+        <item>CODE39</item>
+        <item>TRIOPTIC_CODE39</item>
+        <item>CONVERT_CODE39_32</item>
+        <item>CODE32_PREFIX</item>
+        <item>CODE39_LEN_MIN</item>
+        <item>CODE39_LEN_MAX</item>
+        <item>CODE39_CHK_DIGIT_VERIFICATION</item>
+        <item>TRANSMIT_CODE39_CHK_DIGIT</item>
+        <item>CODE39_FULL_ASCII</item>
+        <item>CODE93</item>
+        <item>CODE93_LEN_MIN</item>
+        <item>CODE93_LEN_MAX</item>
+        <item>CODE11</item>
+        <item>CODE11_LEN_MIN</item>
+        <item>CODE11_LEN_MAX</item>
+        <item>CODE11_CHK_DIGIT_VERIFICATION</item>
+        <item>TRANSMIT_CODE11_CHK_DIGIT</item>
+        <item>INTERLEAVED2OF5</item>
+        <item>INTERLEAVED2OF5_LEN_MIN</item>
+        <item>INTERLEAVED2OF5_LEN_MAX</item>
+        <item>INTERLEAVED2OF5_CHK_DIGIT</item>
+        <item>TRANSMIT_INTERLEAVED2OF5_CHK_DIGIT</item>
+        <item>CONVERT_INTERLEAVED_EAN13</item>
+        <item>DISCRETE2OF5</item>
+        <item>DISCRETE2OF5_LEN_MIN</item>
+        <item>DISCRETE2OF5_LEN_MAX</item>
+        <item>CODABAR</item>
+        <item>CODABAR_LEN_MIN</item>
+        <item>CODABAR_LEN_MAX</item>
+        <item>CODABAR_CLSI_EDIT</item>
+        <item>CODABAR_NOTIS_EDIT</item>
+        <item>MSI</item>
+        <item>MSI_LEN_MIN</item>
+        <item>MSI_LEN_MAX</item>
+        <item>MSI_CHK_DIGIT</item>
+        <item>TRANSMIT_MSI_CHK_DIGIT</item>
+        <item>MSI_CHK_DIGIT_ALGORITHM</item>
+        <item>CHINESE_POST</item>
+        <item>MATRIX2OF5</item>
+        <item>MATRIX2OF5_LEN_MIN</item>
+        <item>MATRIX2OF5_LEN_MAX</item>
+        <item>MATRIX2OF5_CHK_DIGIT</item>
+        <item>TRANSMIT_MATRIX2OF5_CHK_DIGIT</item>
+        <item>KOREA_POST</item>
+        <item>INVERSE_1D</item>
+        <item>US_POSTNET</item>
+        <item>US_PLANET</item>
+        <item>TRANSMIT_US_POSTNET_CHK_DIGIT</item>
+        <item>UK_POST</item>
+        <item>TRANSMIT_UK_POST_CHK_DIGIT</item>
+        <item>JAPANESE_POST</item>
+        <item>AUSTRAILA_POST</item>
+        <item>AUSTRAILA_POST_FORMAT</item>
+        <item>NETHELANS_POST</item>
+        <item>USPS_4</item>
+        <item>UPI_FICS_POST</item>
+        <item>GS1_DATABAR</item>
+        <item>GS1_LIMIT</item>
+        <item>GS1_LIMIT_SECURITY</item>
+        <item>GS1_EXPAND</item>
+        <item>CONVERT_GS1_UPCEAN</item>
+        <item>COMPOSIT_CC_C</item>
+        <item>COMPOSIT_CC_AB</item>
+        <item>COMPOSIT_TCL39</item>
+        <item>UPC_COMPOSIT_MODE</item>
+        <item>GS1128_EMULATION_MODE</item>
+        <item>PDF417</item>
+        <item>MICRO_PDF</item>
+        <item>DATA_MATRIX</item>
+        <item>DATA_MATRIX_INVERSE</item>
+        <item>DATA_MATRIX_DECODE_MIRROR</item>
+        <item>MAXICODE</item>
+        <item>QR_CODE</item>
+        <item>MICRO_QR</item>
+        <item>AZTECCODE</item>
+        <item>AZTECCODE_INVERSE</item>
+        <item>HANXIN</item>
+        <item>HANXIN_INVERSE</item>
+        <item>REDUNDANCY_LEVEL</item>
+        <item>SECURITY_LEVEL</item>
+        <item>INTERCHARATER_GAP_SIZE</item>
+        <item>DECODE_TIMEOUT</item>
+        <item>TIMEOUT_SAME_SYMBOL</item>
+        <item>AIMER_MODE</item>
+        <item>ILLUMINATION_MODE</item>
+        <item>PICKLIST_MODE</item>
+    </string-array>
+
+    <string-array name="bar_pre_text_array">
+        <item>Prefix</item>
+        <item>Suffix</item>
+        <item>Preamble</item>
+        <item>Postamble</item>
+    </string-array>
+
+    <string-array name="scanner_mode_array">
+        <item>LEVEL</item>
+        <item>PULSE</item>
+        <item>EDGE</item>
+        <item>AUTOSTAND</item>
+    </string-array>
+
+    <string-array name="selection_memtype_array">
+        <item>EPC</item>
+        <item>TID</item>
+        <item>USER</item>
+    </string-array>
+
+    <!-- change UI input/output -->
+    <string-array name="selection_array">
+        <item>FALSE</item>
+        <item>TRUE</item>
+    </string-array>
+    
+    <string name="data1_str">Data1</string>
+    <string name="data2_str">Data2</string>
+    <string name="data3_str">Data3</string>
+    <string name="accessPW_str">Access PW</string>
+    <string name="result_str">Result</string>
+    <string name="len_str">Length</string>
+    <string-array name="access_memtype_array">
+        <item>RESERVED</item>
+        <item>EPC</item>
+        <item>TID</item>
+        <item>USER</item>
+    </string-array>
+    <!-- change UI input/output -->
+    
+    <string-array name="selection_action_array">
+        <item>ASLINVA_DSLINVB</item>
+        <item>ASLINVA_NOTHING</item>
+        <item>NOTHING_DSLINVB</item>
+        <item>NSLINVS_NOTHING</item>
+        <item>DSLINVB_ASLINVA</item>
+        <item>DSLINVB_NOTHING</item>
+        <item>NOTHING_ASLINVA</item>
+        <item>NOTHING_NSLINVS</item>
+    </string-array>
+    
+    <string-array name="region_array">
+        <item>KR</item>
+        <item>EU</item>
+        <item>FCC</item>
+        <item>AUSTRALIA</item>
+        <item>BANGLADESH</item>
+        <item>BRAZIL</item>
+        <item>BRUNEI</item>
+        <item>CHINA</item>
+        <item>HONGKONG</item>
+        <item>INDIA</item>
+        <item>INDONESIA</item>
+        <item>IRAN</item>
+        <item>ISRAEL</item>
+        <item>JAPAN_1</item>
+        <item>JAPAN_2</item>
+        <item>JORDAN</item>
+        <item>MALAYSIA</item>
+        <item>MOROCCO</item>
+        <item>NEW_ZEALAND</item>
+        <item>PAKISTAN</item>
+        <item>PERU</item>
+        <item>PHILIPPINES</item>
+        <item>SINGAPORE</item>
+        <item>SOUTH_AFRICA</item>
+        <item>TAIWAN</item>
+        <item>THAILAND</item>
+        <item>URUGUAY</item>
+        <item>VENEZUELA</item>
+        <item>VIETNAM</item>
+        <item>RUSSIA</item>
+        <item>ALGERIA</item>
+        <item>EGYPT</item>
+        <item>CHILE</item>
+        <item>GUATEMALA</item>
+        <item>MACAO</item>
+        <item>NICARAGUA</item>
+        <item>CAMBODIA</item>
+        <item>MYANMAR</item>
+        <item>ETSI_UPPER</item>
+        <item>PARAGUAY</item>
+        <item>NOT_SETTED</item>
+    </string-array>
+
+    <string-array name="region_array1">
+        <item>FCC</item>
+        <item>HK</item>
+        <item>TAIWAN</item>
+        <item>ETSI LOWER</item>
+        <item>ETSI UPPER</item>
+        <item>KOREA</item>
+        <item>MALAYSIA</item>
+        <item>CHINA</item>
+        <item>SOUTH AFRICA</item>
+        <item>BRAZIL</item>
+        <item>THAILAND</item>
+        <item>SINGAPORE</item>
+        <item>AUSTRALIA</item>
+        <item>INDIA</item>
+        <item>URUGUAY</item>
+        <item>VIETNAM</item>
+        <item>ISRAEL</item>
+        <item>PHILIPPINES</item>
+        <item>INDONESIA</item>
+        <item>NEWZEALAND</item>
+        <item>JAPAN2</item>
+        <item>PERU</item>
+        <item>RUSSIA</item>
+        <item>NOT_SETTED</item>
+    </string-array>
+
+    <string-array name="region_array_for_enable_channels">
+        <item>EU</item>
+        <item>JP</item>
+    </string-array>
+
+    <!--[20251202]TEST ToshibaTec START-->
+    <string-array name="region_enable_channel">
+        <item>916800</item>
+        <item>918000</item>
+        <item>919200</item>
+        <item>920400</item>
+        <item>920600</item>
+        <item>920800</item>
+    </string-array>
+    <!--[20251202]TEST ToshibaTec START-->
+    
+    <string-array name="target_array">
+        <item>TARGET A</item>
+        <item>TARGET B</item>
+    </string-array>
+    
+    <string-array name="on_off_array">
+        <item>OFF</item>
+        <item>ON</item>
+    </string-array>
+    
+    <string-array name="sleep_array">
+        <item>Nosleep</item>
+        <item>15 Sec</item>
+        <item>30 Sec</item>
+        <item>1 Min</item>
+        <item>3 Min</item>
+        <item>5 Min</item>
+        <item>10 Min</item>
+    </string-array>
+
+    <string-array name="barcodehw_array">
+        <item>PTT/ SCAN</item>
+        <item>SCAN/ PTT</item>
+        <item>PTT/ PTT</item>
+        <item>SCAN/ SCAN</item>
+    </string-array>
+
+    <string-array name="trigger_array">
+        <item>LEVEL</item>
+        <item>PULSE</item>
+        <item>EDGE</item>
+        <item>AUTOSTAND</item>
+    </string-array>
+
+    <string-array name="multi_number_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    
+    <string-array name="buzzerlevel_array">
+        <item>Low</item>
+        <item>Mid</item>
+        <item>High</item>
+    </string-array>
+    
+    <string-array name="functions_array">
+        <item>1. Connectivity</item>
+        <item>2. Scan</item>
+        <item>3. Battery</item>
+        <item>4. Information</item>
+    </string-array>
+
+    <string-array name="functions_array_admin">
+        <item>1. Connectivity</item>
+        <item>2. Scan</item>
+        <item>3. Battery</item>
+        <item>4. Information</item>
+        <item>Admin - RF Config</item>
+        <item>Admin - RF Selection</item>
+        <item>Admin - SD Function</item>
+        <item>Admin - Inventory</item>
+    </string-array>
+    <string-array name="items_array">
+        <item >1. RF_READ</item>
+        <item >2 .RF_WRITE</item>
+        <item >3. RF_WriteTagID</item>
+        <item >4. RF_WriteAccessPassword</item>
+        <item >5. RF_WriteKillPassword</item>
+        <item >6. RF_LOCK</item>
+        <item >7. RF_KILL</item>
+        <item >8. RF_BlockWrite</item>
+        <item >9. RF_BlockPermalock</item>
+        <item >10. RF_BlockErase</item>
+        <item >11. RF_GetLibVersion</item>
+        <item >12. RF_ResetConfigToFactoryDefaults</item>
+        <item >13. RF_ModuleReboot</item>
+        <item >14. RF_UpdateRFIDFirmware</item>
+        <item >15. RF_RFIDVersion</item>
+    </string-array>
+
+    <string-array name="session_array">
+        <item >S0</item>
+        <item >S1</item>
+        <item >S2</item>
+        <item >S3</item>
+    </string-array>
+
+    <string-array name="sel_flag_array">
+        <item >ALL</item>
+        <item >DEASSERTED</item>
+        <item >ASSERTED</item>
+    </string-array>
+
+    <!-- Set/Get Antenna parameter [ START ] -->
+    <string-array name="sel_antenna_array">
+        <item >Landscape</item>
+        <item >Portrait</item>
+        <item >All</item>
+    </string-array>
+    <!-- Set/Get Antenna parameter [ END ] -->
+
+    <!-- Set/Get Tag Focus [ START ] -->
+    <string-array name="sel_tag_focus_array">
+        <item >0</item>
+        <item >1</item>
+    </string-array>
+    <!-- Set/Get Tag Focus [ END ] -->
+
+</resources>

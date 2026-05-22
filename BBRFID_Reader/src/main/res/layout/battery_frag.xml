@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="co.kr.bluebird.rfid.app.bbrfiddemo.MainActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_state_str" />
+
+                    <TextView
+                        android:id="@+id/battery_state_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/empty_str" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/received_msg_str" />
+
+                    <TextView
+                        android:id="@+id/message_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/empty_str" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="228dp"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:layout_weight="1"
+                android:background="#c0c0c0"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/batt_progress"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="80dip"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:max="100"
+                    android:paddingTop="10dip"
+                    android:paddingBottom="10dip"
+                    android:progressDrawable="@drawable/battery_progress" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <Button
+                        android:id="@+id/bt_charge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_charge_str"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_bat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_bat_str"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_smart_serial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_smart_serial"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <!--smart battery start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <Button
+                        android:id="@+id/bt_smart_batt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_smart_batt"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_smart_voltage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_smart_voltage"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_smart_present"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_smart_present"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <Button
+                        android:id="@+id/bt_smart_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_smart_level"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_smart_life_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_smart_life_time"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_smart_health"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_smart_health"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="5dp">
+
+                    <Button
+                        android:id="@+id/bt_smart_tmeperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_smart_temperature"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_smart_cycle_cnt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_smart_cycle_cnt"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_smart_capacity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_smart_capacity"
+                        android:textSize="10sp" />
+                </LinearLayout>
+                <!--smart battery end-->
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

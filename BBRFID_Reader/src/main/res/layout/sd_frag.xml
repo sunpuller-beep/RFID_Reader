@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="co.kr.bluebird.rfid.app.bbrfiddemo.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/read_data_str" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/received_msg_str" />
+
+                    <TextView
+                        android:id="@+id/message_textview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/empty_str" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/bt_settigger_rfid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_rfid_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_settigger_barcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_barcode_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_trigger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/get_trg_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:layout_weight="1">
+
+                    <Spinner
+                        android:id="@+id/sleep_spin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_sleep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_sleep_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_get_sleep"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/get_sleep_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:layout_weight="1">
+
+                    <Spinner
+                        android:id="@+id/buzzer_lv_spin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_buzzer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_buzzer_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_get_buzzer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/get_buzzer_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/bt_setbuzzermute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_buzzer_mute_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_setbuzzernoisy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_buzzer_noisy_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_getbuzzermute"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/get_buzzer_state_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/bt_mode_key_enable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_mode_key_enable_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_mode_key_disable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_mode_key_disable_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_get_mode_key_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/get_mode_key_enable_state_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/bt_trg_key_enable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_trg_key_enable_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_trg_key_disable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_trg_key_disable_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_get_trg_key_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/get_trg_key_enable_state_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <!--  add tag buzzer START-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bt_tag_buzzer_enable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/set_tag_buzzer_enable_str"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_tag_buzzer_disable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/set_tag_buzzer_disable_str"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_get_tag_buzzer_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_tag_buzzer_state_str"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_set_tag_buzzer_sound"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/set_tag_buzzer_sound_str"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/bt_set_led_enable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/set_led_enable_str"
+                        android:textSize="10sp" />
+
+
+                    <Button
+                        android:id="@+id/bt_set_led_disable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/set_led_disable_str"
+                        android:textSize="10sp" />
+
+                    <Button
+                        android:id="@+id/bt_get_led_state"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:layout_weight="1"
+                        android:text="@string/get_led_state_str"
+                        android:textSize="10sp" />
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/bt_charge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/get_charge_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_bat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/get_bat_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_get_serial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/get_serial_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/bt_firm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/get_firm_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_update_firm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/update_firm_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/bt_set_sd_default_all"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/set_default_all"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+            <!--[START][20251222][Package update]Add RFID FW msg -->
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/bt_package_fw_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="fill"
+                        android:text="@string/update_package_fw_str"
+                        android:textSize="10sp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+            <!--[END][20251222][Package update]Add RFID FW msg-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

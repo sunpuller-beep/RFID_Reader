@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="co.kr.bluebird.rfid.app.bbrfiddemo.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/region_spin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bt_set_region"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:text="@string/set_region_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bt_get_region"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:text="@string/get_region_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bt_get_available_region"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:text="@string/get_available_region_str"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/target_spin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:textSize="9sp" />
+
+                <Button
+                    android:id="@+id/bt_set_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.3"
+                    android:text="@string/set_target_str"
+                    android:textSize="8sp" />
+
+                <Button
+                    android:id="@+id/bt_get_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.3"
+                    android:text="@string/get_target_str"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/duty_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/set_duty_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_duty_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_duty_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_duty_str"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/accesstime_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/set_accesstime_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_accesstime_str"
+                    android:textSize="8sp" />
+
+                <Button
+                    android:id="@+id/get_accesstime_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_accesstime_str"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/power_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/set_power_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_power_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_power_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_power_str"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <!--[20251120]Add Singulation API  START-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/min_singulation_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp"
+                    android:hint="Min Singulation"/>
+
+                <EditText
+                    android:id="@+id/max_singulation_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp"
+                    android:hint="Max Singulation"/>
+            </LinearLayout>
+            <!--[20251120]Add Singulation API  END-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/singulation_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/set_singulation_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_sing_str"
+                    android:textSize="9sp" />
+
+                <Button
+                    android:id="@+id/get_singulation_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_sing_str"
+                    android:textSize="9sp" />
+
+            </LinearLayout>
+
+            <!--[20251120]Add RF expansion mode API START-->
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/rfmode_expansion_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp"
+                    android:hint="mode"/>
+
+                <Button
+                    android:id="@+id/set_rfmode_expansion_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_rfmode_expansion_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_rfmode_expansion_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_rfmode_expansion_str"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+            <!--[20251120]Add RF expansion mode API END-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/rfmode_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/set_rfmode_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_rfmode_str_ext"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_rfmode_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_rfmode_str"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/dwell_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/set_dwell_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_dwell_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_dwell_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_dwell_str"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/lbt_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/set_lbt_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_lbt_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_lbt_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_lbt_str"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <!--[20250425]Add ISO API  START-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/iso_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/set_iso_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_iso_code_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_iso_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_iso_code_str"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+            <!--[20250425]Add ISO API  END-->
+	    
+            <!-- [20250210] Add Gen2x API [START] -->
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/gen2x_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="numberDecimal"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/set_gen2x_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_gen2x_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_gen2x_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_gen2x_str"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+            <!-- [20250210] Add Gen2x API [END] -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/toggle_spin"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="fill"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bt_set_toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_toggle_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bt_get_toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_toggle_str"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/rssi_spin"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="fill"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bt_set_rssi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_rssi_str"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/bt_get_rssi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_rssi_str"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/enable_channels_spin"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="fill"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/set_enable_channels"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_enable_channels"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_enable_channels"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_enable_channels"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+            <!-- Set/Get Antenna parameter [ START ] -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/antenna_spin"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="fill"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/set_current_antenna"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_current_antenna"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_current_antenna"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_current_antenna"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+            <!-- Set/Get Antenna parameter [ END ] -->
+
+            <!-- Set/Get Tag Focus [ START ] -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/tag_focus_spin"
+                    android:layout_width="100dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="fill"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/set_tag_focus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_tag_focus"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/get_tag_focus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_tag_focus"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+            <!-- Set/Get Tag Focus [ END ] -->
+
+            <!--start [20250416]get default channel-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/get_default_channels"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_enable_channels"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+            <!--end [20250416]get default channel-->
+
+            <!--start [20250514]Add Antenna port/status API-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/ant_port_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1.2"
+                    android:inputType="text"
+                    android:textSize="14sp" />
+                <Button
+                    android:id="@+id/set_antenna_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/set_antenna"
+                    android:textSize="10sp" />
+                <Button
+                    android:id="@+id/get_antenna_port"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_antenna"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dip"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <Button
+                    android:id="@+id/get_antenna_status_gpio"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_antenna_gpio"
+                    android:textSize="10sp" />
+                <Button
+                    android:id="@+id/get_antenna_status_rampup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:layout_weight="1"
+                    android:text="@string/get_antenna_rampup"
+                    android:textSize="10sp" />
+            </LinearLayout>
+            <!--end [20250514]Add Antenna port/status API-->
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

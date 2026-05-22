@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="co.kr.bluebird.rfid.app.bbrfiddemo.MainActivity">
+ 
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.85" >
+            
+            <TextView
+                android:id="@+id/text_criteria"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="9sp"
+                android:text="@string/empty_str" />
+                
+            
+        </LinearLayout>
+                
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:text="@string/sel_mem_type_str"
+                android:layout_weight="1" />
+                 
+            <Spinner
+                android:id="@+id/memtype_spin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="10sp"
+                android:layout_weight="1" />
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:text="@string/sel_action_str"
+                android:layout_weight="2" />
+                        
+            <Spinner
+                android:id="@+id/action_spin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="10sp"
+                android:layout_weight="1" />
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:text="@string/sel_mask_str"
+                android:layout_weight="3" />
+            
+            <EditText
+                android:id="@+id/mask_edit"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:layout_height="match_parent" />
+            
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:text="@string/sel_start_pos_str"
+                android:layout_weight="1" />
+            
+            <EditText
+                android:id="@+id/start_pos_edit"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                android:layout_height="match_parent" />
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:text="@string/sel_mask_length_str"
+                android:layout_weight="1" />
+            
+            <EditText
+                android:id="@+id/mask_length_edit"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:inputType="numberDecimal"
+                android:layout_height="match_parent" />
+            
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            
+            <Button
+                android:id="@+id/set_criteria"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:textSize="10sp"
+                android:text="@string/set_criteria_str" />
+
+            <Button
+                android:id="@+id/remove_criteria"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:textSize="10sp"
+                android:text="@string/remove_criteria_str" />
+
+            <!-- START SELECTION TEST -->
+            <Button
+                android:id="@+id/read"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:textSize="10sp"
+                android:text="READ" />
+            <!-- END SELECTION TEST -->
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            
+            <Button
+                android:id="@+id/set_selection"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:text="@string/set_selection_str" />
+            
+            <Button
+                android:id="@+id/get_selection"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:text="@string/get_selection_str" />
+            
+            <Button
+                android:id="@+id/remove_selection"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:text="@string/remove_selection_str" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

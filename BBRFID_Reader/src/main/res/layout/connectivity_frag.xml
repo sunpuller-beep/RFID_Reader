@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="co.kr.bluebird.rfid.app.bbrfiddemo.MainActivity">
+ 
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical">
+    
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/read_data_str" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/received_msg_str" />
+            
+            <TextView
+                android:id="@+id/message_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_str" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>    
+
+    <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="@string/connect_state_str" />
+		
+		<TextView
+		    android:id="@+id/connect_state_textview"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:text="@string/empty_str" />
+            
+    </LinearLayout>
+    
+            
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical">                
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:layout_weight="1">
+            
+            <Button 
+                android:id="@+id/bt_connect"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="@string/connect_str"
+                android:textSize="10sp"
+                android:layout_weight="1" />
+                
+            <Button 
+                android:id="@+id/bt_disconnect"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="@string/disconnect_str"
+                android:textSize="10sp"
+                android:layout_weight="1" />
+            
+            <Button 
+                android:id="@+id/bt_getstate"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="@string/get_con_str"
+                android:textSize="10sp"
+                android:layout_weight="1" />
+            
+        </LinearLayout>
+
+        <!--start [20250526]Check MCU sleep status-->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="5dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/bt_get_mcu_sleep_status"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Get MCU sleep status"
+                android:textSize="10sp"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <!--end [20250526]Check MCU sleep status-->
+
+    </LinearLayout>        
+        
+</LinearLayout>

@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="co.kr.bluebird.rfid.app.bbrfiddemo.MainActivity">
+ 
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        
+        <TextView 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textSize="18sp"
+			android:text="@string/sled_info_str" />
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#000000" />
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="4dip"
+            android:layout_height="40dip"
+            android:orientation="vertical" >
+
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/os_version_str"
+                android:layout_weight="1" />
+                        
+            <TextView 
+                android:id="@+id/tv_os_version"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/empty_str"
+                android:layout_weight="1" />
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="4dip"
+            android:layout_height="40dip"
+            android:orientation="vertical" >
+
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/rf_lib_version_str"
+                android:layout_weight="1" />
+                        
+            <TextView 
+                android:id="@+id/tv_rf_lib_version"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/empty_str"
+                android:layout_weight="1" />
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="4dip"
+            android:layout_height="40dip"
+            android:orientation="vertical">
+
+            <TextView 
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:text="@string/rf_module_version_str"
+                android:layout_weight="1" />
+                        
+            <TextView 
+                android:id="@+id/tv_rfid_version"
+                android:layout_width="280dp"
+                android:layout_height="match_parent"
+                android:text="@string/empty_str"
+                android:layout_weight="1" />
+            
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="4dip"
+            android:layout_height="40dip"
+            android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/tv_firmVer"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/sd_lib_version_str" />
+
+            <TextView
+                android:id="@+id/tv_sd_firm_version"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/empty_str" />
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="4dip"
+            android:layout_height="40dip"
+            android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/tv_btVer"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/sd_bt_version_str" />
+
+            <TextView
+                android:id="@+id/tv_sd_bt_firm_version"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/empty_str" />
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="4dip"
+            android:layout_height="40dip"
+            android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/tv_serial"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/sd_serial_str" />
+            
+            <TextView 
+                android:id="@+id/tv_sd_serial_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/empty_str"
+                android:layout_weight="1" />
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="4dip"
+            android:layout_height="40dip"
+            android:orientation="vertical">
+            
+            <TextView
+                android:id="@+id/tv_bootloaderVer"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/bootloader_version_str" />
+            
+            <TextView 
+                android:id="@+id/tv_bootloader_version"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/empty_str"
+                android:layout_weight="1" />
+            
+        </LinearLayout>
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="4dip"
+            android:layout_height="40dip"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/app_version_str" />
+            
+            <TextView 
+                android:id="@+id/tv_app_version"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/empty_str"
+                android:layout_weight="1" />
+            
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="4dip"
+            android:layout_height="40dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/sled_type" />
+
+            <TextView
+                android:id="@+id/tv_sled_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/empty_str"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#e4d5c6" />
+        
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_marginTop="4dip"
+            android:layout_height="40dip"
+            android:orientation="vertical">
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="0dp"
+                android:text="@string/copyright_str" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="co.kr.bluebird.rfid.app.bbrfiddemo.MainActivity">
+
+    <TextView
+        android:id="@+id/count_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/count_str"
+        android:textColor="#0000ff"
+        android:textStyle="bold"
+        android:maxLines="1"
+        android:inputType="numberDecimal"
+        android:background="#a0a0a0"
+        android:textSize="160sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/battery_state_str"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/battery_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:text=""
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:textSize="16sp" />
+
+        <ProgressBar
+            android:id="@+id/timer_progress"
+            android:layout_width="20dip"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dip"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="5dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/speed_str"
+            android:gravity="bottom"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/speed_avr_count_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:text="@string/empty_str"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dip"
+        android:layout_marginTop="5dip"
+        android:layout_marginBottom="20dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/read_time_str"
+            android:gravity="bottom"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/timer_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:gravity="right"
+            android:text="@string/timer_str"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#607d8b"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="@string/clear_str" />
+
+        <Button
+            android:id="@+id/inven_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dip"
+            android:background="#207d8b"
+            android:layout_weight="1"
+            android:layout_marginRight="10dip"
+            android:text="@string/read_start_str" />
+
+        <Button
+            android:id="@+id/stop_inven_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:background="#207d8b"
+            android:layout_weight="1"
+            android:layout_marginRight="3dip"
+            android:text="@string/read_stop_str" />
+        
+    </LinearLayout>
+
+</LinearLayout>

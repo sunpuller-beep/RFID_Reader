@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="co.kr.bluebird.rfid.app.bbrfiddemo.MainActivity">
+ 
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical">
+    
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/received_data_str" />
+            
+            <TextView
+                android:id="@+id/data_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_str" />
+            
+        </LinearLayout>
+                
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/received_msg_str" />
+            
+            <TextView
+                android:id="@+id/message_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/empty_str" />
+            
+        </LinearLayout>
+        
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_weight="1"
+                  android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_settigger_rfid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/set_rfid_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_settigger_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/set_barcode_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_trigger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/get_trg_str"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_mode_key_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/set_mode_key_enable_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_mode_key_disable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/set_mode_key_disable_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_get_mode_key_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/get_mode_key_enable_state_str"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_multi_scan_type_enable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/set_multi_scan_type_enable_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_multi_scan_type_disable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/set_multi_scan_type_disable_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_get_multi_scan_type_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/get_multi_scan_type_str"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/barcode_multi_number_spin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/bt_set_multi_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1.1"
+                android:text="@string/set_multi_count_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_get_multi_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1.1"
+                android:text="@string/get_multi_count_str"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_enable_multi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/enable_multi_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_disable_multi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/disable_multi_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_get_multi_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/get_multi_str"
+                android:textSize="9sp"/>
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/barcode_trigger_spin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/bt_set_trigger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1.4"
+                android:text="@string/set_trigger_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_get_trigger"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1.4"
+                android:text="@string/get_trigger_str"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/barcode_hw_key_spin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/bt_set_hw_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1.4"
+                android:text="@string/set_barcode_hw_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_get_hw_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1.4"
+                android:text="@string/get_barcode_hw_str"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_barcode_pause"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/pause_barcode_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_barcode_resume"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/resume_barcode_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_get_barcode_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/get_barcode_state_str"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight="1"
+                      android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_barcode_press"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="1"
+                android:text="@string/press_barcode_str"
+                android:textSize="9sp"/>
+
+            <Button
+                android:id="@+id/bt_barcode_release"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_marginRight="40dp"
+                android:layout_weight="1"
+                android:text="@string/release_barcode_str"
+                android:textSize="9sp"/>
+
+        </LinearLayout>
+
+        <!--Start [20250825]Add barcode/camera info-->
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/bt_barcode_get_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill"
+                android:layout_weight="1"
+                android:text="@string/get_barcode_camera_info_str"
+                android:textSize="9sp"/>
+        </LinearLayout>
+        <!--End [20250825]Add barcode/camera info-->
+
+    </LinearLayout>
+
+</LinearLayout>

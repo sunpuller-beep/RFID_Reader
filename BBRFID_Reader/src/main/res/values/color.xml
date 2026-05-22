@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="start">#FF0000</color>
+    <color name="center">#FF8000</color>
+    <color name="end">#FFFF00</color>
+
+    <color name="bat_start">#00FF00</color>
+    <color name="bat_center">#FFFF00</color>
+    <color name="bat_end">#FF0000</color>
+</resources>

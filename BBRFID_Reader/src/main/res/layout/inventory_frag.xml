@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="co.kr.bluebird.rfid.app.bbrfiddemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/tag_list"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/tag_list_container"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/rfid_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/battery_state_str"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/battery_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/timer_des_str"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/timer_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/timer_str"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/speed_str"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/speed_count_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/empty_str"
+                    android:textSize="12sp" />
+
+                <ProgressBar
+                    android:id="@+id/timer_progress"
+                    android:layout_width="20dip"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="5dip"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/count_des_str"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/count_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/count_str"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/avr_speed_str"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/speed_avr_count_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/empty_str"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- [20250402]Add Bulk encoding START -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dip"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/count_success_str"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/sucess_count_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/count_str"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/count_fail_str"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/fail_count_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/count_str"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <!-- [20250402]Add Bulk encoding END -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dip"
+                android:orientation="horizontal" >
+
+                <Switch
+                    android:layout_weight="1"
+                    android:id="@+id/pc_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/remove_pc_str"
+                    android:textSize="8sp" />
+
+                <Switch
+                    android:layout_weight="1"
+                    android:id="@+id/mask_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/selection_str"
+                    android:textSize="8sp" />
+
+                <Switch
+                    android:layout_weight="1"
+                    android:id="@+id/toggle_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/toggle_str"
+                    android:textSize="8sp" />
+
+                <Switch
+                    android:layout_weight="1"
+                    android:id="@+id/file_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="@string/file_str"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:text="@string/session_str"
+                    android:gravity="center"
+                    android:layout_weight="1.4"
+                    android:textSize="11sp" />
+
+                <Spinner
+                    android:id="@+id/session_spin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1.2"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:text="@string/sel_flag_str"
+                    android:gravity="center"
+                    android:layout_weight="1.3"
+                    android:textSize="14sp" />
+
+                <Spinner
+                    android:id="@+id/sel_flag_spin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="fill"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textSize="9sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dip"
+                android:orientation="horizontal" >
+
+                <Switch
+                    android:id="@+id/turbo_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/turbo_str"
+                    android:textSize="8sp" />
+
+                <Switch
+                    android:id="@+id/rssi_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/rssi_str2"
+                    android:textSize="8sp" />
+
+                <Switch
+                    android:id="@+id/filter_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/filter_str"
+                    android:textSize="8sp" />
+
+                <Switch
+                    android:id="@+id/sound_switch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/sound_str"
+                    android:textSize="8sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:id="@+id/tag_locate_container"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tag_locate_text"
+                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text=""/>
+
+                <ImageButton
+                    android:id="@+id/back_button"
+                    android:layout_marginLeft="10dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_back"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#c0c0c0"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="5dip"
+                android:orientation="vertical">
+
+                <ProgressBar
+                    android:id="@+id/tag_locate_progress"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:paddingTop="10dip"
+                    android:paddingBottom="10dip"
+                    android:layout_width="80dip"
+                    android:layout_height="match_parent"
+                    android:progressDrawable="@drawable/vertical_progress"
+                    android:layout_gravity="center"
+                    android:max="100" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/battery_state_str"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/battery_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/timer_des_str"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/timer_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/timer_str"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/speed_str"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/speed_count_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/empty_str"
+            android:textSize="12sp" />
+
+        <ProgressBar
+            android:id="@+id/timer_progress"
+            android:layout_width="20dip"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="5dip"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dip"
+        android:layout_marginTop="5dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/count_des_str"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/count_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/count_str"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/avr_speed_str"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/speed_avr_count_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/empty_str"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:orientation="horizontal" >
+
+        <Switch
+            android:id="@+id/pc_switch"
+            android:layout_width="85dp"
+            android:layout_height="match_parent"
+            android:text="@string/remove_pc_str"
+            android:textSize="8sp" />
+
+        <Switch
+            android:id="@+id/mask_switch"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="@string/selection_str"
+            android:textSize="8sp" />
+
+        <Switch
+            android:id="@+id/toggle_switch"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:text="@string/toggle_str"
+            android:textSize="8sp" />
+
+        <Switch
+            android:id="@+id/file_switch"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:text="@string/file_str"
+            android:textSize="8sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:text="@string/session_str"
+            android:textSize="14sp" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
+
+            <RadioButton
+                android:id="@+id/ses0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:checked="true"
+                android:layout_weight="1"
+                android:text="@string/session_0_str" />
+
+            <RadioButton
+                android:id="@+id/ses1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/session_1_str" />
+
+            <RadioButton
+                android:id="@+id/ses2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/session_2_str" />
+            <RadioButton
+                android:id="@+id/ses3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/session_3_str" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dip"
+        android:orientation="horizontal" >
+
+        <Switch
+            android:id="@+id/turbo_switch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/turbo_str"
+            android:textSize="8sp" />
+
+        <Switch
+            android:id="@+id/rssi_switch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/rssi_str2"
+            android:textSize="8sp" />
+
+        <Switch
+            android:id="@+id/filter_switch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/filter_str"
+            android:textSize="8sp" />
+
+        <Switch
+            android:id="@+id/sound_switch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/sound_str"
+            android:textSize="8sp" />
+
+    </LinearLayout>
+-->
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#607d8b"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="@string/clear_str" />
+
+        <Button
+            android:id="@+id/inven_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dip"
+            android:background="#207d8b"
+            android:layout_weight="1"
+            android:layout_marginRight="10dip"
+            android:text="@string/inven_str" />
+
+        <Button
+            android:id="@+id/stop_inven_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:background="#207d8b"
+            android:layout_weight="1"
+            android:layout_marginRight="3dip"
+            android:text="@string/stop_inven_str" />
+        
+    </LinearLayout>
+
+    <!-- [20250424]Add other inventory api for test START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/inven_withLoc_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#207d8b"
+            android:layout_weight="1"
+            android:layout_marginLeft="3dip"
+            android:text="@string/inven_withLoc_str" />
+
+        <Button
+            android:id="@+id/inven_withPhaseFreq_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dip"
+            android:background="#207d8b"
+            android:layout_weight="1"
+            android:text="@string/inven_withPhaseFreq_str" />
+
+        <Button
+            android:id="@+id/inven_custom_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:background="#207d8b"
+            android:layout_weight="1"
+            android:text="@string/inven_custom_str" />
+
+        <Button
+            android:id="@+id/inven_rssi_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:background="#207d8b"
+            android:layout_weight="1"
+            android:layout_marginRight="3dip"
+            android:text="@string/inven_rssi_str" />
+
+    </LinearLayout>
+    <!-- 20250424]Add other inventory api for test  END -->
+
+    <!-- [20250402]Add Bulk encoding START -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/encoding_inven_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dip"
+            android:background="#207d8b"
+            android:layout_weight="1"
+            android:layout_marginRight="10dip"
+            android:text="@string/encoding_inven_str" />
+
+        <Button
+            android:id="@+id/encoding_stop_inven_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dip"
+            android:background="#207d8b"
+            android:layout_weight="1"
+            android:layout_marginRight="3dip"
+            android:text="@string/encoding_stop_inven_str" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:id="@+id/group1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radioSku1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="SKU1(Encode to 0002)"/>
+            <RadioButton
+                android:id="@+id/radioSku2"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="SKU2(Encode to 0004)"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="10dip"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <RadioGroup
+            android:id="@+id/group2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/radioMass"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Mass"/>
+            <RadioButton
+                android:id="@+id/radioPrivate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Private"/>
+
+            <RadioButton
+                android:id="@+id/radioRevive"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Revive"/>
+        </RadioGroup>
+
+    </LinearLayout>
+    <!-- [20250402]Add Bulk encoding END -->
+
+    <!--[20240710]START - add rssi limit setting menu-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/rssi_limit_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:inputType="numberSigned"
+            android:hint="-100 ~ -30"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/set_rssi_limit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Set RSSI limit"
+            android:background="#207d8b"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/get_rssi_limit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Get RSSI Limit"
+            android:background="#207d8b"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginBottom="3dp"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+    <!--[20240710]END - add rssi limit setting menu-->
+</LinearLayout>
